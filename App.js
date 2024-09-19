@@ -36,17 +36,22 @@ import VideoPlayer from "@/components/VideoPlayer";
 // }
 
 export default function App() {
-  const [fontsLoaded, error] = useFonts({
-    "Formula1-bold": require("./assets/fonts/Formula1-Bold.otf"),
-    "Formula1-regular": require("./assets/fonts/._Formula1-Regular.otf"),
-    "Formula1-wide": require("./assets/fonts/._Formula1-Wide.otf"),
+  const [fontsLoaded] = useFonts({
+    "F1-Bold": require("./assets/fonts/Formula1-Bold.otf"),
+    "F1-Regular": require("@/assets/fonts/Formula1-Regular.otf"),
+    "Normal-Font": require("@/assets/fonts/Bahnschrift.ttf"),
+    // "Sofia-bold": require("./assets/fonts/static/SofiaSans-Bold.ttf"),
+    // "Sofia-semi-bold": require("./assets/fonts/static/SofiaSans-SemiBold.ttf"),
+    // "Sofia-bold-italic": require("./assets/fonts/static/SofiaSans-BlackItalic.ttf"),
   });
-
-  console.log("error", error);
 
   if (!fontsLoaded) {
     return <View />; // or <Text>Loading fonts...</Text>
   }
 
-  return <RootNavigator />;
+  return (
+    // <SafeAreaView>
+    <RootNavigator />
+    // </SafeAreaView>
+  );
 }
