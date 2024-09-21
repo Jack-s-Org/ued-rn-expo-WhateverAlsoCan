@@ -1,30 +1,37 @@
-import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import HomeScreen from "./HomeScreen";
-import NotificationsScreen from "./NotificationsScreen";
+import NewsScreen from "./NewsScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SafeAreaView } from "react-native-safe-area-context";
 import MeScreen from "./MeScreen";
-import DiscoverScreen from "./DiscoverScreen";
+import LeaderboardScreen from "./LeaderboardScreen";
 import AppDrawer from "./AppDrawer";
 import SettingsScreen from "./SettingsScreen";
 import AddScreen from "./AddScreen";
+import Octicons from "@expo/vector-icons/Octicons";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import LiveScreen from "./LiveScreen";
+import LogInScreen from "./LogInScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const Empty = () => null;
-
 const MainTabs = ({ navigation }) => {
-  const [unreadCount, setUnreadCount] = useState(3);
   return (
     <AppDrawer navigation={navigation}>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarActiveTintColor: "#408086",
+          tabBarActiveTintColor: "#D81159",
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            height: 92,
+            backgroundColor: "#000000",
+            opacity: 1,
+            paddingBottom: 26,
+            paddingHorizontal: 5,
+          },
         }}
       >
         <Tab.Screen
@@ -32,54 +39,50 @@ const MainTabs = ({ navigation }) => {
           component={HomeScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <FontAwesome name="remove" size={size} color={color} />
+              <Octicons name="home" size={24} color={color} />
             ),
             tabBarLabel: "Home",
           }}
         />
 
         <Tab.Screen
-          name="Discover"
-          component={DiscoverScreen}
+          name="Leaderboard"
+          component={LeaderboardScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="search" size={size} color={color} />
+              <AntDesign name="Trophy" size={24} color={color} />
             ),
-            tabBarLabel: "Discover",
+            tabBarLabel: "Leaderboard",
           }}
         />
 
         <Tab.Screen
-          name="AddTab"
-          component={Empty} // this is a workaround to show a full screen when this tab is pressed
+          name="Live"
+          component={LiveScreen}
           options={{
-            tabBarIcon: ({ color }) => (
-              <Ionicons name="add" size={36} color={color} />
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="record-circle-outline"
+                size={40}
+                color={color}
+              />
             ),
-            tabBarLabel: () => null,
-          }}
-          listeners={{
-            tabPress: (e) => {
-              e.preventDefault(); // stop default navigation
-              navigation.navigate("Add"); // manually navigate to the stack screen outside of the tab navigators
-            },
+            tabBarLabel: "Live",
           }}
         />
 
         <Tab.Screen
-          name="Inbox"
-          component={NotificationsScreen}
+          name="News"
+          component={NewsScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="chatbox" size={size} color={color} />
+              <MaterialCommunityIcons
+                name="newspaper-variant-outline"
+                size={24}
+                color={color}
+              />
             ),
-            tabBarLabel: "Inbox",
-            tabBarBadge: unreadCount,
-          }}
-          listeners={{
-            tabPress: () => {
-              setUnreadCount(null);
-            },
+            tabBarLabel: "News",
           }}
         />
 
@@ -88,7 +91,7 @@ const MainTabs = ({ navigation }) => {
           component={MeScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="person" size={size} color={color} />
+              <FontAwesome5 name="user" size={24} color={color} />
             ),
             tabBarLabel: "Me",
           }}
@@ -115,6 +118,21 @@ const MainScreens = () => {
         name="Settings"
         component={SettingsScreen}
         options={{ animation: "fade_from_bottom" }}
+      />
+      <MainStacks.Screen
+        name="News"
+        component={NewsScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+      <MainStacks.Screen
+        name="Live"
+        component={LiveScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+      <MainStacks.Screen
+        name="LogIn"
+        component={LogInScreen}
+        options={{ animation: "fade_from_bottom", headerShown: false }}
       />
     </MainStacks.Navigator>
   );

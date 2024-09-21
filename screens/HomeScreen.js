@@ -1,8 +1,17 @@
-import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       {/* SafeArea for Header */}
@@ -24,6 +33,7 @@ const HomeScreen = () => {
           style={{
             backgroundColor: "#0f0f0f",
             alignItems: "center",
+            marginBottom: -300,
           }}
         >
           <Image
@@ -97,7 +107,6 @@ const HomeScreen = () => {
                 style={{
                   flex: 1,
                   marginBottom: 16,
-                  // top: -500,
                 }}
               >
                 <View>
@@ -145,20 +154,59 @@ const HomeScreen = () => {
               </ScrollView>
             </View>
 
-            <View
-              style={{
-                backgroundColor: "white",
-                zIndex: 6,
-                width: 154,
-                height: 40,
-                position: "absolute",
-                top: -260,
-                left: 188,
-                borderRadius: 4,
-              }}
-            >
-              <Text style={{ alignSelf: "center", top: 12 }}>ENTER LIVE</Text>
-            </View>
+            <TouchableOpacity onPress={() => navigation.navigate("Live")}>
+              <View
+                style={{
+                  backgroundColor: "white",
+                  zIndex: 6,
+                  width: 154,
+                  height: 40,
+                  position: "absolute",
+                  top: -1390,
+                  left: 188,
+                  borderRadius: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    top: 13,
+                    fontFamily: "Normal-Font",
+                  }}
+                >
+                  ENTER LIVE
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => navigation.navigate("News")}>
+              <View
+                style={{
+                  backgroundColor: "white",
+                  zIndex: 6,
+                  width: 349,
+                  height: 56,
+                  position: "absolute",
+                  top: -470,
+
+                  left: -5,
+
+                  borderRadius: 8,
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    top: 20,
+                    fontFamily: "F1-Bold",
+                    fontSize: 18,
+                    color: "#8647D6",
+                  }}
+                >
+                  SEE MORE
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
         {/* </SafeAreaView> */}
@@ -179,7 +227,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-end",
     zIndex: 1,
-    // textAlignVertical: "top",
   },
   headerText: {
     color: "white",
@@ -209,21 +256,21 @@ const styles = StyleSheet.create({
   WidgetFirstText: {
     fontFamily: "Normal-Font",
     color: "#FFFFFF",
-    fontSize: 14,
+    fontSize: 12,
     right: 125,
     top: -22,
   },
   WidgetSecondText: {
     fontFamily: "Normal-Font",
     color: "#FFFFFF",
-    fontSize: 14,
+    fontSize: 12,
     right: 25,
     top: -34,
   },
   WidgetThirdText: {
     fontFamily: "Normal-Font",
     color: "#FFFFFF",
-    fontSize: 14,
+    fontSize: 12,
     left: 100,
     top: -46,
   },
@@ -231,11 +278,12 @@ const styles = StyleSheet.create({
     fontFamily: "F1-Bold",
     color: "#FFFFFF",
     fontSize: 25,
-    right: 136,
+
+    left: -144,
     top: -145,
   },
   Panel: {
-    height: 728,
+    height: 800,
     width: 365,
     marginLeft: -12,
     marginTop: -40,
@@ -251,20 +299,22 @@ const styles = StyleSheet.create({
     height: 350.48,
     width: 355,
     zIndex: 5,
-    top: -700,
+
+    top: -760,
     left: -17,
-    // marginTop: 0,
   },
   SectionDivider: {
     height: 20,
     width: 355,
-    left: -17,
-    top: -660,
+    left: -10,
+
+    top: -740,
   },
   ScrollImages: {
     height: 250,
     width: 200,
     marginRight: 24,
+    top: -20,
   },
 });
 

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { TouchableOpacity } from "react-native";
+// import { TouchableOpacity } from "react-native";
 import { Drawer } from "react-native-drawer-layout";
 import {
-  SafeAreaInsetsContext,
+  // SafeAreaInsetsContext,
   SafeAreaView,
 } from "react-native-safe-area-context";
-import Ionicons from "@expo/vector-icons/Ionicons";
+// import Ionicons from "@expo/vector-icons/Ionicons";
 import { DrawerItem } from "@react-navigation/drawer";
 
 export default function AppDrawer({ navigation, children }) {
@@ -35,7 +35,7 @@ export default function AppDrawer({ navigation, children }) {
         );
       }}
     >
-      <SafeAreaInsetsContext.Consumer>
+      {/* <SafeAreaInsetsContext.Consumer>
         {(insets) => (
           <TouchableOpacity
             onPress={() => {
@@ -52,7 +52,7 @@ export default function AppDrawer({ navigation, children }) {
             <Ionicons name="menu" size={32} />
           </TouchableOpacity>
         )}
-      </SafeAreaInsetsContext.Consumer>
+      </SafeAreaInsetsContext.Consumer> */}
       {children}
     </Drawer>
   );
