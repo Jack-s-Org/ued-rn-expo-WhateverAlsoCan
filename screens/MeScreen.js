@@ -471,7 +471,7 @@ const NewsScreen = () => {
               zIndex: 2,
             }}
           >
-            Convo Master
+            MASTERY
           </Text>
           <Text
             style={{
@@ -487,7 +487,7 @@ const NewsScreen = () => {
               zIndex: 2,
             }}
           >
-            Create over 100 convo starters
+            Reach level 50
           </Text>
           <Image
             source={require("@/assets/ProfilePage/Achievement_Tab.png")}
@@ -531,7 +531,7 @@ const NewsScreen = () => {
               zIndex: 2,
             }}
           >
-            Convo Master
+            “HEY! I’M NOTICED!”
           </Text>
           <Text
             style={{
@@ -547,7 +547,7 @@ const NewsScreen = () => {
               zIndex: 2,
             }}
           >
-            Create over 100 convo starters
+            Have a race official comment on your topic
           </Text>
           <Image
             source={require("@/assets/NewsPage/Section_Cutter.png")}
@@ -559,6 +559,254 @@ const NewsScreen = () => {
               left: 0,
               width: 370,
               alignSelf: "center",
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Image
+            source={require("@/assets/ProfilePage/Profile1.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 60,
+              top: -2295,
+              left: 10,
+              width: 60,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 1000,
+              top: -2300,
+              left: 90,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 18,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            @AMES25565
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/BioContainer.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 275,
+              top: -2390,
+              left: 90,
+              width: 275,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 250,
+              top: -2265,
+              left: 97,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 12,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            Woah there buddy, I see you just sent an angry emoji alongside your
+            message
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/Profile2.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 60,
+              top: -2205,
+              left: 10,
+              width: 60,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 1000,
+              top: -2210,
+              left: 90,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 18,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            @REALVERSTAPPEN69420
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/BioContainer.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 275,
+              top: -2300,
+              left: 90,
+              width: 275,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 250,
+              top: -2175,
+              left: 97,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 12,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            Oh wow, that’s a wild take! You’ve got people thinking with that
+            one.
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/Profile3.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 60,
+              top: -2115,
+              left: 10,
+              width: 60,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 1000,
+              top: -2120,
+              left: 90,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 18,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            @FERARNI
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/BioContainer.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 275,
+              top: -2210,
+              left: 90,
+              width: 275,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 250,
+              top: -2085,
+              left: 97,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 12,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            That’s a curveball! Didn’t see that one coming!
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/Profile4.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 60,
+              top: -2025,
+              left: 10,
+              width: 60,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 1000,
+              top: -2030,
+              left: 90,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 18,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            @NOT_FIA
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/BioContainer.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 275,
+              top: -2120,
+              left: 90,
+              width: 275,
+              zIndex: 2,
+              marginBottom: 1,
+            }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              height: 100,
+              width: 250,
+              top: -1995,
+              left: 97,
+              fontFamily: "Bahnschrift",
+              fontStyle: "Bold",
+              fontSize: 12,
+              color: "#FFFFFF",
+              zIndex: 2,
+            }}
+          >
+            Looks like you’ve got a hot take there! Love seeing passionate fans
+            like you.
+          </Text>
+          <Image
+            source={require("@/assets/ProfilePage/TextImage.png")}
+            resizeMode="contain"
+            style={{
+              position: "absolute",
+              height: 275,
+              top: -2020,
+              left: 10,
+              width: 365,
               zIndex: 2,
               marginBottom: 1,
             }}
